@@ -1,0 +1,358 @@
+
+
+.thirdPage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width:100%;
+    position: relative;
+
+  }
+  
+  
+  .thirdPageTitle{
+    width: 50%;
+  
+  }
+  .thirdPageTitle p{
+    font-size: 82px;
+    font-weight: 400;
+    line-height: 80px;
+    letter-spacing: -0.02em;
+    text-align: center;
+  }
+  .thirdPageTitle h6{
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 23.4px;
+  text-align: center;
+  color: rgb(164, 154, 154);
+  }
+  
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px; 
+    width: 90%; 
+  }
+  
+  .gridText {
+    grid-column: 1;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 25rem;
+    margin-top: -10rem;
+    margin-bottom: 20rem;
+    left:0;
+  }
+  .Right{
+    grid-column: 3;
+    margin-left: auto;
+    margin-top: 40rem;
+  }
+  
+  .gridText h6 {
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 32px;
+    letter-spacing: -0.02em;
+  }
+  
+  .gridText p {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 23.4px;
+    letter-spacing: -0.02em;
+    text-align: left;
+    color: rgb(153, 147, 147);
+  }
+ 
+  
+  .girdPhone {
+    grid-column: 2;
+    position: static;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 920px;
+    width: 420px;
+    justify-self: center; 
+    transform: translateX(0);
+    border: 4px solid rgba(58, 58, 60, 1);
+    border-radius: 47px;
+    background-color: #1b1b1b;
+  }
+  .girdPhone::after {
+    content: '';
+    position: absolute;
+    top: -6px; 
+    left: -6px; 
+    width: calc(100% + 12px); 
+    height: calc(100% + 12px); 
+    border: 2.14px solid rgba(255, 255, 255, 0.468);
+    border-radius: 55px;
+    box-sizing: border-box; 
+  }
+  
+  .girdPhone::before {
+    content: '';
+    position: absolute;
+    top: 0px; 
+    left: 0px; 
+    width: 100% ;
+    height: 100%; 
+    border: 10px solid rgb(0, 0, 0);
+    border-radius: 45px;
+    box-sizing: border-box; 
+    box-shadow: 30px 0px 100px 5px rgba(0, 0, 0, 0.6);
+  
+  }
+  
+  .overlay1{
+    position: absolute;
+    top: 167px; 
+    left: -9px; 
+    width: 7px; 
+    height: 32px;
+  background-color: #1f1f1f;
+    border-radius: 55px;
+  
+  }
+  
+  .overlay1::after{
+    content: '';
+    position: absolute;
+    top: 1.5px; 
+    left: 1px; 
+    width: 100% ;
+    height:3px; 
+    width: 70% ;
+    height:5px; 
+    background: linear-gradient(180deg, #272B31 0%, #4A4E53 44.22%, #1E1E1F 149.69%);
+  }
+  .overlay1::before{
+    content: '';
+    position: absolute;
+    top: 25.5px; 
+    left: 1.3px; 
+    width: 65% ;
+    height:5px; 
+    background: linear-gradient(180deg, #272B31 0%, #4A4E53 44.22%, #1E1E1F 149.69%);
+  }
+  
+  
+  .overlay2{
+    position: absolute;
+    top: 230px; 
+    left: -9px; 
+    width: 7px; 
+    height: 62px;
+  background-color: #1f1f1f;
+    border-radius: 55px;
+  
+  }
+  
+  .overlay2::after{
+    content: '';
+    position: absolute;
+    top: 1.5px; 
+    left: 1px; 
+    width: 100% ;
+    height:3px; 
+    width: 70% ;
+    height:5px; 
+    background: linear-gradient(180deg, #272B31 0%, #4A4E53 44.22%, #1E1E1F 149.69%);
+  }
+  .overlay2::before{
+    content: '';
+    position: absolute;
+    top: 55.5px; 
+    left: 1.3px; 
+    width: 65% ;
+    height:5px; 
+    background: linear-gradient(180deg, #272B31 0%, #4A4E53 44.22%, #1E1E1F 149.69%);
+  }
+  
+  
+  .overlay3{
+    position: absolute;
+    top: 306px; 
+    left: -10px; 
+    width: 7px; 
+    height: 62px;
+  background-color: #1f1f1f;
+    border-radius: 55px;
+  
+  }
+  
+  .overlay3::after{
+    content: '';
+    position: absolute;
+    top: 1.5px; 
+    left: 1px; 
+    width: 100% ;
+    height:3px; 
+    width: 70% ;
+    height:5px; 
+    background: linear-gradient(180deg, #272B31 0%, #4A4E53 44.22%, #1E1E1F 149.69%);
+  }
+  .overlay3::before{
+    content: '';
+    position: absolute;
+    top: 55.5px; 
+    left: 1.3px; 
+    width: 65% ;
+    height:5px; 
+    background: linear-gradient(180deg, #272B31 0%, #4A4E53 44.22%, #1E1E1F 149.69%);
+  }
+  
+  .overlay4{
+    position: absolute;
+    top: 250px; 
+    left: 424px; 
+    width: 7px; 
+    height: 94px;
+  background-color: #1f1f1f;
+    border-radius: 55px;
+  
+  }
+  
+  .overlay4::after{
+    content: '';
+    position: absolute;
+    top: 1.5px; 
+    left: 1px; 
+    width: 100% ;
+    height:3px; 
+    width: 70% ;
+    height:5px; 
+    background: linear-gradient(180deg, #272B31 0%, #4A4E53 44.22%, #1E1E1F 149.69%);
+  }
+  .overlay4::before{
+    content: '';
+    position: absolute;
+    top: 86.5px; 
+    left: 1.3px; 
+    width: 65% ;
+    height:5px; 
+    background: linear-gradient(180deg, #272B31 0%, #4A4E53 44.22%, #1E1E1F 149.69%);
+  }
+  
+  
+  .Video {
+    position: fixed; 
+    bottom: 0; 
+    left: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: hidden; 
+    z-index: -1; 
+    border-radius: 50px;
+  }
+  
+  .backgroundVideo {
+    position: absolute;
+    bottom: 0; 
+    left: 0;
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out; 
+  }
+ 
+  
+  
+.fade-out {
+    opacity: 0;
+  }
+  
+.fade-in {
+    opacity: 1;
+  }
+  
+  
+  
+  
+  @media only screen and (max-width: 530px) {
+
+
+    .thirdPage {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width:100%;
+      position: relative;
+    }
+    
+    
+    .thirdPageTitle{
+      width: 40%;
+    
+    }
+    .thirdPageTitle p{
+      font-size: 32px;
+      line-height: 35px;
+    }
+ 
+   
+
+    
+    .grid {
+      display: flex;
+      flex-direction: column;
+      gap: 0; 
+      width: 100%; 
+      justify-content: center;
+    }
+
+    
+  
+    .gridText {
+      display: flex;
+      flex-direction: column;
+      width: 25rem;
+      margin-top: 2rem;
+      text-align: center;
+    }
+  
+    
+    .gridText h6 {
+      font-size: 27px;
+    }
+    
+    .gridText p {
+      font-size: 16px;
+      text-align: center;
+    }
+   
+    .Right{
+      margin-left: 0;
+      margin-top: 0;
+    }
+    
+    .girdPhone {
+      height: 650px;
+      width: 320px;
+      justify-self: center; 
+      transform: translateX(15%);
+  
+    }
+
+
+    .overlay4{
+      position: absolute;
+      top: 250px; 
+      left: 323px; 
+      width: 7px; 
+      height: 94px;
+    background-color: #1f1f1f;
+      border-radius: 55px;
+    
+    }
+
+
+  }
+  
+  

@@ -1,4 +1,4 @@
-import { useEffect,useRef } from "react";
+import { useEffect, useRef } from "react";
 import "../styles/Home.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -7,58 +7,52 @@ import {
   faArrowCircleRight,
   faArrowCircleLeft,
   faPlane,
-  faSignal,
-  faWifi,
-  faBattery,
-  faArrowLeft,
-  faPaperclip,
-  faKeyboard,
-  faMicrophone
+  faPlus,
+  faChevronDown,
 } from "@fortawesome/free-solid-svg-icons";
+import PhoneFrame from "../component/PhoneFrame";
+import Slider1 from "../component/slider1";
 
+const items = [
+  { text: "Does Fluid AI increase wellbeing and meaning in life?" },
+  { text: "What can curiosity, wonder, and awe do for you?" },
+  { text: "Does Fluid AI increase wellbeing and meaning in life?" },
+  { text: "What can curiosity, wonder, and awe do for you?" },
+  { text: "Does Fluid AI increase wellbeing and meaning in life?" },
+  { text: "What can curiosity, wonder, and awe do for you?" },
+  { text: "Does Fluid AI increase wellbeing and meaning in life?" },
+  { text: "What can curiosity, wonder, and awe do for you?" },
+];
 export default function Home() {
+  const listRef = useRef([]);
 
-  const phoneRef = useRef(null);
-  const triggerPhoneRef = useRef(null);
-  const lastphoneRef = useRef(null);
-  
-useEffect(() =>{
+  const handleScroll = () => {
+    listRef.current.forEach((listItem, index) => {
+      const listRect = listItem.getBoundingClientRect();
+      const viewportHeight = window.innerHeight;
 
+      if (listRect.top <= viewportHeight) {
+        listItem.classList.add("list");
+      }
+    });
+  };
 
-  const phone = phoneRef.current;
-  const lastPhone = lastphoneRef.current;
-
-
-  console.log(phone)
-  const handlescroll = () =>{
-  const phoneRect = phone.getBoundingClientRect();
-  const lastRect = lastPhone.getBoundingClientRect();
-
-
-  if(phoneRect.top <= 0){
-    phone.style.position ="sticky";
-    phone.style.top ="0";
-  }else{
-    phone.style.position ="static";
-  }
-  if(lastRect.top <= 0){
-    phone.style.position ="static";
-  }
-}
-
-window.addEventListener("scroll",handlescroll)
-
-return () =>{
-  window.removeEventListener("scroll",handlescroll)
-}
-},[])
-
-
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
     <>
       <section>
         <div className="FirstPage">
+          <div class="burger-menu">
+            <span></span>
+            <span class="shorter"></span>
+            <span></span>
+          </div>
           <div className="NavText">
             <div className="NavTextLeft">
               <p>Our Features</p>
@@ -174,107 +168,105 @@ return () =>{
         </div>
       </section>
       <section className="thirdPage">
-        <div className="thirdPageTitle">
-          <h6>Our Features</h6>
+        <PhoneFrame />
+      </section>
+
+      <section className="fourthPage">
+        <Slider1 />
+      </section>
+
+      <section className="fifthPage">
+        <div className="leftSide">
+          <h6>What can curiosity,wonder, and awe do for you?</h6>
           <p>
-            Fluid AI was born out of a desire to simplify and streamline modern
-            life
+            Research shows that experiencing curiosity and awe can immensely
+            benefit our mental, physical, and professional health. Here’s a
+            brief overview of what curiosity and awe can do for you.
           </p>
         </div>
-        <div className="grid">
-          <div className="gridText">
-            <h6>Fluid AI: Simplify, Organize, and Achieve More</h6>
-            <p>
-              In a world where daily tasks, communication, and goals often
-              become overwhelming, Fluid AI offers an innovative solution.
-              Combining advanced AI technology with a user-friendly interface,
-              it brings together to-do lists, chats, saved items, and bucket
-              lists into one seamless platform.
-            </p>
-          </div>
-          <div className="girdPhone" ref={phoneRef}>
-            <div className="overlay1"></div>
-            <div className="overlay2"></div>
-            <div className="overlay3"></div>
-            <div className="overlay4"></div>
 
-            <div className="PhoneNav">
-              <p>9:41</p>
-              <div className="PhoneNavIcons">
-                <FontAwesomeIcon icon={faSignal} /> 
-                <FontAwesomeIcon icon={faWifi} /> 
-                <FontAwesomeIcon icon={faBattery} /> 
+        <div className="rightSide">
+          {items.map((item, index) => (
+            <div key={index} ref={(el) => (listRef.current[index] = el)}>
+              <div className="item">
+                <p>{item.text}</p>
+                <FontAwesomeIcon className="plus" icon={faPlus} />
               </div>
+              <div className="line"></div>
             </div>
-            <div className="SecondPhoneNav">
-        
-                <FontAwesomeIcon icon={faArrowLeft} /> 
-                <p>Speaking to Fluid AI</p>
-                <FontAwesomeIcon icon={faClock} />
- 
-            </div>
-
-            <div className="PhoneText">
-              <p>Hi! Can you find me top rated restaurants with a</p>
-              <span> nice view</span>
-            </div>
-
-            <div className="PhoneFooter">
-        
-        <FontAwesomeIcon className="paperclip" icon={faPaperclip} /> 
-        <FontAwesomeIcon className="microphone" icon={faMicrophone} />
-        <FontAwesomeIcon className="keyboard" icon={faKeyboard} />
-
-    </div>
-
-    <div className="Video">
-      <video className="backgroundVideo" autoPlay muted loop>
-      <source src="/phoneFooter.mp4" type="video/mp4"/>
-  
-    Your browser does not support the video tag.
-      </video>
-    </div>
-
-          </div>
-
-          <div className="gridText Right" ref={triggerPhoneRef}>
-            <h6>Fluid AI: Simplify, Organize, and Achieve More</h6>
-            <p>
-              In a world where daily tasks, communication, and goals often
-              become overwhelming, Fluid AI offers an innovative solution.
-              Combining advanced AI technology with a user-friendly interface,
-              it brings together to-do lists, chats, saved items, and bucket
-              lists into one seamless platform.
-            </p>
-          </div>
-
-          <div className="gridText">
-            <h6>Fluid AI: Simplify, Organize, and Achieve More</h6>
-            <p>
-              In a world where daily tasks, communication, and goals often
-              become overwhelming, Fluid AI offers an innovative solution.
-              Combining advanced AI technology with a user-friendly interface,
-              it brings together to-do lists, chats, saved items, and bucket
-              lists into one seamless platform.
-            </p>
-          </div>
-          <br/>
-          <div className="gridText Right"  ref={lastphoneRef}>
-            <h6>Fluid AI: Simplify, Organize, and Achieve More</h6>
-            <p>
-              In a world where daily tasks, communication, and goals often
-              become overwhelming, Fluid AI offers an innovative solution.
-              Combining advanced AI technology with a user-friendly interface,
-              it brings together to-do lists, chats, saved items, and bucket
-              lists into one seamless platform.
-            </p>
-          </div>
-
-     
+          ))}
         </div>
       </section>
 
+      <section className="sixthPage">
+        <div className="Background"></div>
+        <div className="Sixthgrid">
+          <div className="sixthGridleft">
+            <p>Join the Fluid AI Waitlist Today!</p>
+            <div className="form">
+              <div className="input-container">
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder=" "
+                  required
+                />
+                <label for="name">Name</label>
+              </div>
 
+              <div className="input-container">
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder=" "
+                  required
+                />
+                <label for="email">Email</label>
+              </div>
+
+              <div className="input-container">
+                <input
+                  type="text"
+                  id="country"
+                  name="country"
+                  placeholder=" "
+                  required
+                />
+                <label for="country">Country</label>
+              </div>
+            </div>
+            <br />
+            <button className="JoinBtn">Join Waitlist</button>
+          </div>
+          <div className="HandImgContainer">
+            <img src="./handPhone.png" alt="Hand Phone" />
+          </div>
+        </div>
+      </section>
+      <section className="footer">
+        <div className="footerLogo">
+          <p>Fluid AI</p>
+          <h6>2024Fluid AI</h6>
+        </div>
+        <div>
+          <div className="footerMenu">
+            <div>
+              <p>Our Features</p>
+              <p>Areas</p>
+
+              <p>FAQs</p>
+              <p>The Waitlist</p>
+              <p>Contact us</p>
+            </div>
+            <div>
+              <p>Team of Service</p>
+              <p>Privacy Policy</p>
+            </div>
+          </div>
+        </div>
+      </section>
     </>
   );
 }
