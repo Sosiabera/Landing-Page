@@ -1,0 +1,798 @@
+body {
+  background-color: #010101;
+  width: 100vw;
+  margin: 0;
+  font-family: "SF Pro Display", sans-serif;
+  overflow-x: hidden;
+  color: #ffffff;
+}
+
+.FirstPage {
+  height: 100vh;
+}
+
+.NavText {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 95%;
+  display: flex;
+  justify-content: space-between;
+  padding: 44px 40px;
+}
+
+.NavText p {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: -0.4px;
+  text-align: center;
+}
+
+.NavTextLeft,
+.NavTextRight {
+  display: flex;
+  gap: 76px;
+}
+
+.logoCenter {
+  display: inline-flex;
+
+  position: relative;
+  top: 8rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.logo {
+  position: relative;
+  top: 12rem;
+  height: 10rem;
+  width: 10rem;
+  border: #ffffff 1px solid;
+}
+
+.logoCenter p {
+  font-size: 11.25rem;
+}
+
+.scroll {
+  position: relative;
+  top: 8rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.secondPage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: relative;
+}
+
+.secondPageCenter {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.secondPageCenter h6 {
+  font-size: 40px;
+  font-weight: 400;
+  text-align: center;
+}
+
+.secondPageCenter p {
+  font-size: 76px;
+  font-weight: 400;
+  line-height: 88px;
+  letter-spacing: -0.02em;
+  text-align: center;
+  margin-top: -2rem;
+}
+
+.JoinBtn {
+  width: 9rem;
+  border: none;
+  border-radius: 52px;
+  padding: 12px 0 12px 0;
+  box-shadow: 0px 5px 30px 0px #ffffff9c;
+  margin-top: -3rem;
+}
+
+.Card {
+  display: flex;
+  position: absolute;
+  width: 175px;
+  height: 228px;
+  top: 8rem;
+  left: 14rem;
+  background-image:url('C:\Users\sosia\Landing Page\public\resturant.png') ;
+  background-size: 190% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  backdrop-filter: blur(31.34px);
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.399) 70%, rgba(0, 0, 0, 0.421) 100%);
+  pointer-events: none; 
+}
+
+.cardText{
+  position: relative;
+  font-size: .8em;
+  font-weight: 400;
+line-height: 19.06px;
+  left:.5rem;
+  height: 1.5rem;
+  text-align: center;
+  padding: 5px 8px 0px 8px;
+  background-color:rgba(255, 255, 255, 0.137);
+  backdrop-filter: blur(12px);
+  border-radius: 15px;
+
+
+}
+.icon {
+  position: absolute;
+  font-size: 1.2em;
+  color: rgba(255, 255, 255, 0.6); 
+  top: .5rem;
+  left: 9.5rem;
+}
+.CardBottom{
+  display: flex;
+  flex-direction: column;
+  justify-content: ;
+  position: absolute;
+  bottom: -1.5rem;
+  width: 100%;
+  padding-left: 1rem;
+  background-color: #0101014e;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.625) 70%, rgba(0, 0, 0, 0.619) 100%);
+
+
+}
+.CardBottom p{
+  font-size: 1em;
+
+}
+.CardBottom h6{
+
+  margin-top: -.7rem;
+font-size: 13px;
+font-weight: 400;
+line-height: 19.06px;
+text-align: left;
+color: rgba(255, 255, 255, 0.6);
+}
+
+.Todo{
+  position: absolute;
+  top: 19.5rem;
+  height: 5.7rem;
+  left: -8.5rem;
+  padding-right: 3.6rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 27px;
+  background: rgba(38, 38, 38, 0.19);
+}
+.Todo p{
+  font-size: 22px;
+  margin-top: -2rem;
+  margin-left:1rem;
+}
+.Todo h6{
+  font-size: 18px;
+  line-height: 2px;
+  margin-left:1rem;
+}
+
+.Event{
+  position: absolute;
+  top: 30rem;
+  height: 9rem;
+  width: 15rem;
+  left: -1rem;
+  padding-right: 2.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 30px;
+  background: rgba(38, 38, 38, 0.19);
+}
+.Event p ,
+.Event h6,
+.Time{
+  margin-left:1rem;
+}
+.Event p{
+  font-size: 22px;
+  margin-top: -2.2rem;
+
+}
+.Event h6{
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 400;
+  line-height: 22.45px;
+}
+.Time{
+  display: inline-flex;
+  align-items: center;
+  margin-top: -3rem;
+  color: rgba(255, 255, 255, 0.6);
+font-size: 16px;
+font-weight: 400;
+line-height: 22.45px;
+
+}
+
+.Cafe{
+  position: absolute;
+  top: 6.5rem;
+  height: 2.5rem;
+  width: 9rem;
+  left: 26rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 30px;
+  background: rgba(38, 38, 38, 0.19);
+}
+.Cafe p{
+  margin-top: .8rem;
+font-size: 16px;
+font-weight: 400;
+text-align: center;
+}
+
+.TodoRignt{
+  position: absolute;
+  top: -21rem;
+  height: 4.7rem;
+  width: 14.8rem;
+  left: 64.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 27px;
+  background: rgba(38, 38, 38, 0.19);
+}
+.TodoRignt p{
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 29px;
+}
+.TodoRignt h6{
+  font-size: 16px;
+  font-weight: 400;
+  margin-top: -.1rem;
+}
+
+.EventRignt{
+  position: absolute;
+  top: -13.2rem;
+  left: 74.5rem;
+  height: 9rem;
+  width: 15rem;
+  padding-right: 2.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 30px;
+  background: rgba(38, 38, 38, 0.19);
+}
+.EventRignt p ,
+.EventRignt h6,
+.TimeRignt{
+  margin-left:1rem;
+}
+.EventRignt p{
+  font-size: 22px;
+  margin-top: -2.2rem;
+
+}
+.EventRignt h6{
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 400;
+  line-height: 22.45px;
+}
+.TimeRignt{
+  display: inline-flex;
+  align-items: center;
+  margin-top: -3rem;
+  color: rgba(255, 255, 255, 0.6);
+font-size: 16px;
+font-weight: 400;
+line-height: 22.45px;
+
+}
+
+.flight{
+  position: absolute;
+  top: -1rem;
+  height: 2.5rem;
+  width: 9rem;
+  left: 82.2rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 30px;
+  background: rgba(38, 38, 38, 0.19);
+}
+.flight p{
+  margin-top: .8rem;
+font-size: 16px;
+font-weight: 400;
+text-align: center;
+}
+
+.Trip{
+  position: absolute;
+  top: 3rem;
+  left: 79.2rem;
+  height: 2.5rem;
+  width: 9rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 30px;
+  background: rgba(38, 38, 38, 0.19);
+}
+.Trip p{
+  margin-top: .8rem;
+font-size: 16px;
+font-weight: 400;
+text-align: center;
+}
+
+
+.Card-2 {
+  display: flex;
+  position: absolute;
+  width: 223px;
+  height: 232px;
+  top: 7rem;
+  left: 63rem;
+  background-image:url('C:\Users\sosia\Landing Page\public\dubai.jpg') ;
+  background-size: 290% 130%;
+  background-position: 12% 100%;
+  background-repeat: no-repeat;
+  backdrop-filter: blur(31.34px);
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+
+
+
+.Card-2Bottom{
+  display: flex;
+  flex-direction: column;
+  justify-content: ;
+  position: absolute;
+  bottom: -1rem;
+  width: 100%;
+  background-color: #0101014e;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.192) 0%, rgb(31, 28, 28) 70%, rgb(40, 40, 40) 100%);
+padding-bottom: 1.5rem;
+
+}
+.Card-2Bottom p{
+font-size: 20px;
+font-weight: 400;
+line-height: 29.93px;
+text-align: left;
+
+}
+.Card-2Bottom h6{
+font-size: 15px;
+font-weight: 400;
+line-height: 19.06px;
+color: rgba(255, 255, 255, 0.6);
+}
+
+.Card-2Time{
+  display: inline-flex;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.6);;
+font-size: 15px;
+font-weight: 400;
+line-height: 22.45px;
+padding-left: 1rem;
+margin-top: -1rem;
+}
+
+
+
+.bookFight{
+  position: absolute;
+  top: 13.2rem;
+  left: 14.5rem;
+  height: 9rem;
+  width: 15rem;
+  padding-right: 2.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 30px;
+  background: rgba(38, 38, 38, 0.19);
+}
+.EventRignt p ,
+.EventRignt h6,
+.TimeRignt{
+  margin-left:1rem;
+}
+.EventRignt p{
+  font-size: 22px;
+  margin-top: -2.2rem;
+
+}
+.EventRignt h6{
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 400;
+  line-height: 22.45px;
+}
+.TimeRignt{
+  display: inline-flex;
+  align-items: center;
+  margin-top: -3rem;
+  color: rgba(255, 255, 255, 0.6);
+font-size: 16px;
+font-weight: 400;
+line-height: 22.45px;
+
+}
+
+
+.thirdPage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: relative;
+  margin-top: 65rem;
+}
+
+
+.thirdPageTitle{
+  width: 50%;
+
+}
+.thirdPageTitle p{
+  font-size: 82px;
+  font-weight: 400;
+  line-height: 80px;
+  letter-spacing: -0.02em;
+  text-align: center;
+}
+.thirdPageTitle h6{
+font-size: 18px;
+font-weight: 500;
+line-height: 23.4px;
+text-align: center;
+color: rgb(164, 154, 154);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  justify-content: center;
+  align-items: center;
+  gap: 20px; 
+  width: 90%; 
+}
+
+.gridText {
+  display: flex;
+  flex-direction: column;
+  width: 25rem;
+  margin-top: 20rem;
+}
+.Right{
+  grid-column: 2;
+
+}
+
+.gridText h6 {
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 32px;
+  letter-spacing: -0.02em;
+}
+
+.gridText p {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 23.4px;
+  letter-spacing: -0.02em;
+  text-align: left;
+  color: rgb(153, 147, 147);
+}
+
+.Right{
+margin-left: auto;
+}
+
+.girdPhone {
+  position: static;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 730px;
+  width: 380px;
+  justify-self: center; 
+  left:50%;
+  transform: translateX(-50%);
+  border: 4px solid rgba(58, 58, 60, 1);
+  border-radius: 47px;
+  background-color: #1b1b1b;
+}
+.girdPhone::after {
+  content: '';
+  position: absolute;
+  top: -6px; 
+  left: -6px; 
+  width: calc(100% + 12px); 
+  height: calc(100% + 12px); 
+  border: 2.14px solid rgba(255, 255, 255, 0.468);
+  border-radius: 55px;
+  box-sizing: border-box; 
+}
+
+.girdPhone::before {
+  content: '';
+  position: absolute;
+  top: 0px; 
+  left: 0px; 
+  width: 100% ;
+  height: 100%; 
+  border: 10px solid rgb(0, 0, 0);
+  border-radius: 45px;
+  box-sizing: border-box; 
+  box-shadow: 30px 0px 100px 5px rgba(0, 0, 0, 0.6);
+
+}
+
+.overlay1{
+  position: absolute;
+  top: 167px; 
+  left: -12px; 
+  width: 7px; 
+  height: 32px;
+background-color: #1f1f1f;
+  border-radius: 55px;
+
+}
+
+.overlay1::after{
+  content: '';
+  position: absolute;
+  top: 1.5px; 
+  left: 1px; 
+  width: 100% ;
+  height:3px; 
+  width: 70% ;
+  height:5px; 
+  background: linear-gradient(180deg, #272B31 0%, #4A4E53 44.22%, #1E1E1F 149.69%);
+}
+.overlay1::before{
+  content: '';
+  position: absolute;
+  top: 25.5px; 
+  left: 1.3px; 
+  width: 65% ;
+  height:5px; 
+  background: linear-gradient(180deg, #272B31 0%, #4A4E53 44.22%, #1E1E1F 149.69%);
+}
+
+
+.overlay2{
+  position: absolute;
+  top: 230px; 
+  left: -12px; 
+  width: 7px; 
+  height: 62px;
+background-color: #1f1f1f;
+  border-radius: 55px;
+
+}
+
+.overlay2::after{
+  content: '';
+  position: absolute;
+  top: 1.5px; 
+  left: 1px; 
+  width: 100% ;
+  height:3px; 
+  width: 70% ;
+  height:5px; 
+  background: linear-gradient(180deg, #272B31 0%, #4A4E53 44.22%, #1E1E1F 149.69%);
+}
+.overlay2::before{
+  content: '';
+  position: absolute;
+  top: 55.5px; 
+  left: 1.3px; 
+  width: 65% ;
+  height:5px; 
+  background: linear-gradient(180deg, #272B31 0%, #4A4E53 44.22%, #1E1E1F 149.69%);
+}
+
+
+.overlay3{
+  position: absolute;
+  top: 306px; 
+  left: -12px; 
+  width: 7px; 
+  height: 62px;
+background-color: #1f1f1f;
+  border-radius: 55px;
+
+}
+
+.overlay3::after{
+  content: '';
+  position: absolute;
+  top: 1.5px; 
+  left: 1px; 
+  width: 100% ;
+  height:3px; 
+  width: 70% ;
+  height:5px; 
+  background: linear-gradient(180deg, #272B31 0%, #4A4E53 44.22%, #1E1E1F 149.69%);
+}
+.overlay3::before{
+  content: '';
+  position: absolute;
+  top: 55.5px; 
+  left: 1.3px; 
+  width: 65% ;
+  height:5px; 
+  background: linear-gradient(180deg, #272B31 0%, #4A4E53 44.22%, #1E1E1F 149.69%);
+}
+
+.overlay4{
+  position: absolute;
+  top: 250px; 
+  left: 385px; 
+  width: 7px; 
+  height: 94px;
+background-color: #1f1f1f;
+  border-radius: 55px;
+
+}
+
+.overlay4::after{
+  content: '';
+  position: absolute;
+  top: 1.5px; 
+  left: 1px; 
+  width: 100% ;
+  height:3px; 
+  width: 70% ;
+  height:5px; 
+  background: linear-gradient(180deg, #272B31 0%, #4A4E53 44.22%, #1E1E1F 149.69%);
+}
+.overlay4::before{
+  content: '';
+  position: absolute;
+  top: 86.5px; 
+  left: 1.3px; 
+  width: 65% ;
+  height:5px; 
+  background: linear-gradient(180deg, #272B31 0%, #4A4E53 44.22%, #1E1E1F 149.69%);
+}
+
+.PhoneNav{
+  position: absolute;
+  top:1rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap:11rem;
+}
+
+.PhoneNavIcons{
+  display: flex;
+  gap:.5rem;
+}
+
+.SecondPhoneNav{
+  position: absolute;
+  top:5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap:5.5rem;
+}
+
+.SecondPhoneNav p{
+font-size: 14px;
+font-weight: 500;
+line-height: 16px;
+text-align: center;
+
+}
+
+.PhoneText {
+  display: flex; 
+  flex-direction: column; 
+  text-align: center; 
+}
+
+.PhoneText p,
+.PhoneText span{
+font-size: 28px;
+font-weight: 400;
+line-height: 28px;
+letter-spacing: -0.02em;
+text-align: center;
+}
+.PhoneText span{
+  color: #4c4c4c;
+  margin-top: -2rem;
+}
+
+.PhoneFooter{
+  position: absolute;
+  bottom: 3rem;
+  display: flex;
+  gap: 5rem;
+}
+
+.paperclip,
+.keyboard{
+  font-size: 1.3rem;
+  background-color: #010101c3;
+  padding: .8rem;
+  border: #c6c6c666 1px solid;
+  border-radius: 50%;
+}
+.microphone {
+  font-size: 1.8rem;
+  background-color: #ffffff6e;
+  padding: 1rem 1.2rem;
+  border: #c6c6c666 1px solid;
+  border-radius: 50%;
+  position: relative; /* This is important for ::after */
+}
+
+.microphone::before {
+  content: '';
+  position: absolute;
+  top: 0; 
+  left: 0; 
+  width: 100%;
+  height: 100%;
+  background-color: #b600006e;
+  border: #c6c6c666 1px solid;
+  border-radius: 50%;
+}
+
+.Video {
+  position: fixed; 
+  bottom: 0; 
+  left: 0;
+  width: 100%; 
+  height: 50%; 
+  overflow: hidden; 
+  z-index: -1; 
+  border-radius: 50px;
+}
+
+.backgroundVideo {
+  position: absolute;
+  bottom: -20rem; 
+  left: -7rem;
+  width: 150%; 
+  height: 180%; 
+  object-fit: cover; 
+  opacity:0.9 ;
+}
+
+
+
+
+
+
+
